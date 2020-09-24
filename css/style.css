@@ -1,0 +1,50 @@
+.box{width: 806px; 
+	height: 606px; 
+	position: absolute;
+	border: 3px solid black; 
+	top: calc(50% - 303px);
+	left: calc(50% - 403px);}
+
+.sky{float: left;
+	width: 100px;
+	height: 100px;
+	background-color: #03a9f4e0;
+	transition-property: all;
+	transition-duration: 1s;
+
+	animation-name: op;
+	animation-duration: 2s;
+	animation-play-state: paused;}
+
+@keyframes op{
+	0%{opacity: 0}
+	100% {opacity: 1}
+	}
+
+.sky:hover {
+	background-color: red;
+	border-radius: 100%;
+	transform: rotate(180deg);
+	animation-play-state: running;}
+
+.ground{float: left;
+	width: 100px;
+	height: 100px;
+	background-color: #4caf50;
+	transition-property: all;
+	transform: scale(1, 1);
+	transition-duration: 1s;
+
+	animation-name: op;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;}
+
+@keyframes op{
+	0%{opacity: 0}
+	100% {opacity: 1}
+	}
+
+.ground:hover {
+	transform: scale(0.5, 0.5);
+	animation-play-state: running;}
